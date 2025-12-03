@@ -14,11 +14,13 @@ body {
   background: transparent;
 }
 
+/* Logo */
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
+/* Links del navbar */
 .nav-links {
   list-style: none;
   display: flex;
@@ -35,6 +37,7 @@ body {
   border-bottom: 2px solid #000;
 }
 
+/* Botones */
 .buttons .btn {
   text-decoration: none;
   padding: 8px 16px;
@@ -51,6 +54,50 @@ body {
   background: #333;
   color: white;
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  nav,
+  .buttons {
+    display: none;
+  }
+
+  .navbar.open nav,
+  .navbar.open .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  /* Estilo del menú desplegado */
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+}
+
+
 
 /* --- HERO SECTION --- */
 .hero {
@@ -92,19 +139,42 @@ body {
   margin: 40px;
   padding: 30px;
   border-radius: 20px;
+
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.about div{
-    width: 60%;
-    text-align: left;
-    font-size: 20px;
+.about div {
+  width: 60%;
+  text-align: left;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
 }
 
+/* Imagen responsive */
 .about-logo {
   width: 15%;
-  margin-top: 10px;
+  max-width: 180px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-logo {
+    width: 40%; /* crece un poco en móvil */
+    max-width: 200px;
+  }
 }
 
 /* --- MISION/VISION --- */
@@ -124,11 +194,12 @@ body {
   border-radius: 20px;
   width: 280px;
   text-align: center;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
 }
 
 /* --- LOGIN PAGE --- */
 .login-container {
-  max-width: 400px;
+  width: 30%;
   margin: 80px auto;
   padding: 30px;
   background: #404b5a;
@@ -174,6 +245,11 @@ body {
 
 .facebook {
   background: white;
+}
+
+.extra-options a,
+.register-text *{
+  color: rgb(150, 150, 255);
 }
 
 footer {
