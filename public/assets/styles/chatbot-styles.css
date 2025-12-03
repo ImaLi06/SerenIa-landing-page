@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(to bottom, #98ccd3, #ffffff);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.chatbot-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 40px;
+  gap: 30px;
+}
+
+/* SIDEBAR */
+.chat-sidebar {
+  background: #3c4454;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-sidebar li {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.chat-sidebar hr {
+  border: none;
+  border-top: 1px solid #8690a0;
+  margin: 25px 0;
+}
+
+.chat-sidebar h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* CHAT MAIN */
+.chat-main {
+  background: #3c4454;
+  padding: 40px;
+  border-radius: 30px;
+  color: white;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  background: linear-gradient(to right, #7ea7ff, #9cd4da);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 20px;
+}
+
+/* INPUT */
+.chat-input {
+  margin: 40px auto;
+  background: transparent;
+  border: 2px solid #b0c4d6;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  width: 80%;
+}
+
+.chat-input input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-icons span {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* RECOMENDADOS */
+.recommended h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.recommended p {
+  margin: 8px 0;
+  color: #d2d8e4;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .chatbot-container {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-sidebar {
+    height: auto;
+  }
+
+  .chat-main {
+    height: auto;
+  }
+
+  .chat-input {
+    width: 100%;
+  }
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: transparent;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Links del navbar */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #000;
+}
+
+/* Botones */
+.buttons .btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  margin-left: 10px;
+}
+
+.btn.login {
+  background: transparent;
+}
+
+.btn.signup {
+  background: #333;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  nav,
+  .buttons {
+    display: none;
+  }
+
+  .navbar.open nav,
+  .navbar.open .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  /* Estilo del menú desplegado */
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+}
