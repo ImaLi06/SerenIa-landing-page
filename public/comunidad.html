@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SerenIA - Login</title>
+  <link rel="stylesheet" href="assets/styles/comunidad-styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">SerenIA</h1>
+
+  <button class="hamburger">
+    ☰
+  </button>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#">ChatBot</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#" class="active">Comunidad</a></li>
+    </ul>
+  </nav>
+
+  <div class="buttons">
+    <a href="login.html" class="btn login">Login</a>
+    <a href="#" class="btn signup">Sign up</a>
+  </div>
+</header>
+
+  <main class="community-container">
+  <!-- Feed principal -->
+  <section class="feed">
+
+    <!-- Post 1 -->
+    <article class="post">
+      <div class="post-header">
+        <img src="https://i.pravatar.cc/70?img=12" class="avatar">
+        <div>
+          <h4>JustBell <span>@bell111</span></h4>
+          <p class="time">3h</p>
+        </div>
+      </div>
+
+      <p class="post-text">
+        Me gusta tocar en mis ratos libres. ¿Ustedes tocan algún instrumento?
+      </p>
+
+      <img src="./assets/images/comunidad-img.jpeg"
+           class="post-image">
+
+      <div class="tags">
+        <span>🎵 2</span>
+        <button>#música</button>
+        <button>#hobby</button>
+      </div>
+    </article>
+
+    <hr class="divider">
+
+    <!-- Post 2 -->
+    <article class="post">
+      <div class="post-header">
+        <img src="https://i.pravatar.cc/70?img=22" class="avatar">
+        <div>
+          <h4>alan_so <span>@alan_did</span></h4>
+          <p class="time">7h</p>
+        </div>
+      </div>
+
+      <p class="post-text">
+        Hace no mucho, me reencontré con amigos de la secundaria. Hablábamos de todo cuando estudiábamos juntos...
+        ¿Alguno de ustedes ha pasado por algo similar?
+      </p>
+
+      <div class="tags">
+        <span>💬 3</span>
+        <button>#hobby</button>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <button class="new-post">Nueva publicación</button>
+
+    <h3>Tags</h3>
+
+    <div class="tag-list">
+      <span>#música</span>
+      <span>#hobby</span>
+      <span>#ejercicio</span>
+      <span>#meditación</span>
+      <span>#lectura</span>
+      <span>#personal</span>
+      <span>#productividad</span>
+    </div>
+  </aside>
+
+</main>
+
+  <script src="./assets/scripts/main.js"></script>
+</body>
+</html>

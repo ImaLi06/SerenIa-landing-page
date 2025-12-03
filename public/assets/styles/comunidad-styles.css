@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #b7e3e4, #f0f8f8);
+  color: #222;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: transparent;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Links del navbar */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #000;
+}
+
+/* Botones */
+.buttons .btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  margin-left: 10px;
+}
+
+.btn.login {
+  background: transparent;
+}
+
+.btn.signup {
+  background: #333;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  nav,
+  .buttons {
+    display: none;
+  }
+
+  .navbar.open nav,
+  .navbar.open .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+  }
+
+  /* Estilo del menú desplegado */
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+}
+
+/* --- Layout principal --- */
+.community-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* --- Feed --- */
+.feed {
+  background: #3c4454;
+  padding: 25px 35px;
+  border-radius: 20px;
+  color: white;
+}
+
+.post {
+  margin-bottom: 40px;
+}
+
+/* Header de post */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.post-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.post-header span {
+  color: #bbbbbb;
+  font-weight: 400;
+}
+
+.time {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Texto */
+.post-text {
+  margin: 12px 0 18px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+/* Imagen del post */
+.post-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tags */
+.tags {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tags button,
+.tag-list span {
+  background: #7e63d9;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+/* Divisor */
+.divider {
+  border: none;
+  border-top: 1px solid #697081;
+  margin: 30px 0;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background: #3c4454;
+  padding: 25px;
+  border-radius: 20px;
+  color: white;
+  height: fit-content;
+}
+
+.new-post {
+  width: 100%;
+  background: #9cd4da;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .community-container {
+    grid-template-columns: 1fr;
+  }
+}
